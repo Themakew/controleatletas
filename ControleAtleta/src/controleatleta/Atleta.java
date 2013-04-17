@@ -13,12 +13,13 @@ public class Atleta {
     private Double peso;
     private String nomePai;
     private String nomeMae;
-    private char sexo;
+    private String sexo;  //-- colocando o sexo como subdivisor
     private String rg;
     private String cpf;
     
-    public Atleta(String nome) {
+    public Atleta(String nome, String sexo) {
         this.nome = nome;
+        this.sexo = sexo;
         this.endereco = new Endereco();
     }
 
@@ -94,11 +95,11 @@ public class Atleta {
         this.rg = rg;
     }
 
-    public char getSexo() {
+    public String getSexo() {
         return sexo;
     }
 
-    public void setSexo(char sexo) {
+    public void setSexo(String sexo) {
         this.sexo = sexo;
     }
 
