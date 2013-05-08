@@ -8,13 +8,13 @@ objetos e técnicas de programação).
 Desenvolvimento
 ---------------
 
-Use o NetBeans para desenvolver algo baseado nele.
+NetBeans
 
 
 Autores
 ------
 
-Paulo Meirelles
+Paulo Meirelles e Ruyther Parente da Costa
 
 
 Licença
