@@ -1,4 +1,4 @@
-package controleatleta;
+package model;
 
 public class Premiacao {
 

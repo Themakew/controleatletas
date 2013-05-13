@@ -1,5 +1,6 @@
-package controleatleta;
+package controleatleta.controle;
 
+import model.Judoca;
 import java.util.ArrayList;
 
 public class ControleJudoca {

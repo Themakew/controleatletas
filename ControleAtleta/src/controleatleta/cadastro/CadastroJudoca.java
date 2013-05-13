@@ -1,5 +1,9 @@
-package controleatleta;
+package controleatleta.cadastro;
 
+import controleatleta.controle.ControleJudoca;
+import model.Endereco;
+import model.Judoca;
+import model.Premiacao;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

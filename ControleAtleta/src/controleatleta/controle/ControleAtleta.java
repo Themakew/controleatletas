@@ -1,4 +1,6 @@
-package controleatleta;
+package controleatleta.controle;
+
+import controleatleta.cadastro.CadastroJudoca;
 
 public class ControleAtleta {
 
