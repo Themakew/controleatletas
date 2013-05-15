@@ -1,4 +1,4 @@
-package controleatleta.cadastro;
+package controleatleta.view;
 
 import controleatleta.controle.ControleJudoca;
 import model.Endereco;
@@ -15,35 +15,6 @@ import javax.swing.ListSelectionModel;
 import javax.swing.table.DefaultTableModel;
 
 public class CadastroJudoca extends javax.swing.JFrame {
-
-    private final byte SEXO_MASCULINO_INDICE = 0;
-    private final byte SEXO_FEMININO_INDICE = 1;
-    private final String SEXO_MASCULINO_VALOR = "M";
-    private final String SEXO_FEMININO_VALOR = "F";
-    private final byte CATEGORIA_MIRIM_ASPIRANTE_INDICE = 0;
-    private final byte CATEGORIA_INFANTIL_ASPIRANTE_INDICE = 1;
-    private final byte CATEGORIA_INFANTOJUVENIL_ASPIRANTE_INDICE=2;
-    private final byte CATEGORIA_PREJUVENIL_ASPIRANTE_INDICE = 3;
-    private final byte CATEGORIA_JUVENIL_ASPIRANTE_INDICE = 4;
-    private final byte CATEGORIA_ADULTO_ASPIRANTE_INDICE = 5;
-    private final byte CATEGORIA_PREJUVENIL_ESPECIAL_INDICE = 6;
-    private final byte CATEGORIA_JUVENIL_ESPECIAL_INDICE = 7;
-    private final byte CATEGORIA_JUNIOR_ESPECIAL_INDICE = 8;
-    private final byte CATEGORIA_SENIOR_ESPECIAL_INDICE = 9;
-    private final String CATEGORIA_MIRIM_ASPIRANTE_VALOR = "Mirim Aspirante";
-    private final String CATEGORIA_INFANTIL_ASPIRANTE_VALOR = "Infantil Aspirante";
-    private final String CATEGORIA_INFANTOJUVENIL_ASPIRANTE_VALOR = "Infanto Juvenil Aspirante";
-    private final String CATEGORIA_PREJUVENIL_ASPIRANTE_VALOR = "Pre Juvenil Aspirante";
-    private final String CATEGORIA_JUVENIL_ASPIRANTE_VALOR = "Juvenil Aspirante";
-    private final String CATEGORIA_ADULTO_ASPIRANTE_VALOR = "Adulto Aspirante";
-    private final String CATEGORIA_PREJUVENIL_ESPECIAL_VALOR = "Pre Juvenil Especial";
-    private final String CATEGORIA_JUVENIL_ESPECIAL_VALOR = "Juvenil Especial";
-    private final String CATEGORIA_JUNIOR_ESPECIAL_VALOR = "Junior Especial";
-    private final String CATEGORIA_SENIOR_ESPECIAL_VALOR = "Senior Especial";
-    private final byte ESTILO_ORTODOXO_INDICE = 0;
-    private final byte ESTILO_SOUTHPAW_INDICE = 1;
-    private final char ESTILO_ORTODOXO_VALOR = 'O';
-    private final char ESTILO_SOUTHPAW_VALOR = 'S';
     private DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
     private ControleJudoca controleJudoca;
     private Judoca umJudoca;
@@ -141,60 +112,60 @@ public class CadastroJudoca extends javax.swing.JFrame {
             premiacaoListModel.addElement(p);
         }
 
-        if(umJudoca.getSexo().equals(SEXO_MASCULINO_VALOR)) {
-                jComboBoxSexo.setSelectedIndex(SEXO_MASCULINO_INDICE);
+        if(umJudoca.getSexo().equals("M")) {
+                jComboBoxSexo.setSelectedIndex(0);
         }
-        else if(umJudoca.getSexo().equals(SEXO_FEMININO_VALOR)){
-                jComboBoxSexo.setSelectedIndex(SEXO_FEMININO_INDICE);
+        else if(umJudoca.getSexo().equals("F")){
+                jComboBoxSexo.setSelectedIndex(1);
         }
 
-        if(umJudoca.getClasses() == null ? CATEGORIA_MIRIM_ASPIRANTE_VALOR == null : umJudoca.getClasses().equals(CATEGORIA_MIRIM_ASPIRANTE_VALOR))
+        if(umJudoca.getClasses().equals("Mirim Aspirante"))
         {
-            jComboBoxClasses.setSelectedIndex(CATEGORIA_MIRIM_ASPIRANTE_INDICE);            
+            jComboBoxClasses.setSelectedIndex(0);            
         }
-        else if(umJudoca.getClasses() == null ? CATEGORIA_INFANTIL_ASPIRANTE_VALOR == null : umJudoca.getClasses().equals(CATEGORIA_INFANTIL_ASPIRANTE_VALOR))
+        else if(umJudoca.getClasses().equals("Infantil Aspirante"))
         {
-            jComboBoxClasses.setSelectedIndex(CATEGORIA_INFANTIL_ASPIRANTE_INDICE);
+            jComboBoxClasses.setSelectedIndex(1);
         }
-        else if (umJudoca.getClasses() == null ? CATEGORIA_INFANTOJUVENIL_ASPIRANTE_VALOR == null : umJudoca.getClasses().equals(CATEGORIA_INFANTOJUVENIL_ASPIRANTE_VALOR))
+        else if (umJudoca.getClasses().equals("Infanto Juvenil Aspirante"))
         {
-            jComboBoxClasses.setSelectedIndex(CATEGORIA_INFANTOJUVENIL_ASPIRANTE_INDICE);
+            jComboBoxClasses.setSelectedIndex(2);
         }
-        else if(umJudoca.getClasses() == null ? CATEGORIA_PREJUVENIL_ASPIRANTE_VALOR == null : umJudoca.getClasses().equals(CATEGORIA_PREJUVENIL_ASPIRANTE_VALOR))
+        else if(umJudoca.getClasses().equals("Pre Juvenil Aspirante"))
         {
-            jComboBoxClasses.setSelectedIndex(CATEGORIA_PREJUVENIL_ASPIRANTE_INDICE);
+            jComboBoxClasses.setSelectedIndex(3);
         }
-        else if(umJudoca.getClasses() == null ? CATEGORIA_JUVENIL_ASPIRANTE_VALOR == null : umJudoca.getClasses().equals(CATEGORIA_JUVENIL_ASPIRANTE_VALOR))
+        else if(umJudoca.getClasses().equals("Juvenil Aspirante"))
         {
-            jComboBoxClasses.setSelectedIndex(CATEGORIA_JUVENIL_ASPIRANTE_INDICE);
+            jComboBoxClasses.setSelectedIndex(3);
         }    
-        else if(umJudoca.getClasses() == null ? CATEGORIA_ADULTO_ASPIRANTE_VALOR == null : umJudoca.getClasses().equals(CATEGORIA_ADULTO_ASPIRANTE_VALOR))
+        else if(umJudoca.getClasses().equals("Adulto Aspirante"))
         {
-            jComboBoxClasses.setSelectedIndex(CATEGORIA_ADULTO_ASPIRANTE_INDICE);
+            jComboBoxClasses.setSelectedIndex(4);
         }    
-        else if(umJudoca.getClasses() == null ? CATEGORIA_PREJUVENIL_ASPIRANTE_VALOR == null : umJudoca.getClasses().equals(CATEGORIA_PREJUVENIL_ESPECIAL_VALOR))
+        else if(umJudoca.getClasses().equals("Pre Juvenil Especial"))
         {
-            jComboBoxClasses.setSelectedIndex(CATEGORIA_PREJUVENIL_ESPECIAL_INDICE);
+            jComboBoxClasses.setSelectedIndex(5);
         }    
-        else if(umJudoca.getClasses() == null ? CATEGORIA_JUVENIL_ESPECIAL_VALOR == null : umJudoca.getClasses().equals(CATEGORIA_JUVENIL_ESPECIAL_VALOR))
+        else if(umJudoca.getClasses().equals("Juvenil Especial"))
         {
-            jComboBoxClasses.setSelectedIndex(CATEGORIA_JUVENIL_ESPECIAL_INDICE);
+            jComboBoxClasses.setSelectedIndex(6);
         }
-        else if(umJudoca.getClasses() == null ? CATEGORIA_JUNIOR_ESPECIAL_VALOR == null : umJudoca.getClasses().equals(CATEGORIA_JUNIOR_ESPECIAL_VALOR))
+        else if(umJudoca.getClasses().equals("Junior Especial"))
         {
-            jComboBoxClasses.setSelectedIndex(CATEGORIA_JUNIOR_ESPECIAL_INDICE);
+            jComboBoxClasses.setSelectedIndex(7);
         }
-        else if(umJudoca.getClasses() == null ? CATEGORIA_SENIOR_ESPECIAL_VALOR == null : umJudoca.getClasses().equals(CATEGORIA_SENIOR_ESPECIAL_VALOR))
+        else if(umJudoca.getClasses().equals("Senior Especial"))
         {
-            jComboBoxClasses.setSelectedIndex(CATEGORIA_SENIOR_ESPECIAL_INDICE);
+            jComboBoxClasses.setSelectedIndex(8);
         }
 
         switch (umJudoca.getEstiloPredominante()) {
-            case ESTILO_ORTODOXO_VALOR:
-                jComboBoxEstiloPredominante.setSelectedIndex(ESTILO_ORTODOXO_INDICE);
+            case 'O':
+                jComboBoxEstiloPredominante.setSelectedIndex(0);
                 break;
-            case ESTILO_SOUTHPAW_VALOR:
-                jComboBoxEstiloPredominante.setSelectedIndex(ESTILO_SOUTHPAW_INDICE);
+            case 'S':
+                jComboBoxEstiloPredominante.setSelectedIndex(1);
                 break;
         }
 
@@ -399,53 +370,53 @@ public class CadastroJudoca extends javax.swing.JFrame {
         umJudoca.setTotalVitorias(Integer.parseInt(jTextFieldTotalVitorias.getText()));
 
         switch (jComboBoxSexo.getSelectedIndex()) {
-            case SEXO_MASCULINO_INDICE:
-                umJudoca.setSexo(SEXO_MASCULINO_VALOR);
+            case 0:
+                umJudoca.setSexo("M");
                 break;
-            case SEXO_FEMININO_INDICE:
-                umJudoca.setSexo(SEXO_FEMININO_VALOR);
+            case 1:
+                umJudoca.setSexo("F");
                 break;
         }
 
         switch (jComboBoxClasses.getSelectedIndex()) {
-            case CATEGORIA_MIRIM_ASPIRANTE_INDICE:
-                umJudoca.setClasses(CATEGORIA_MIRIM_ASPIRANTE_VALOR);
+            case 0:
+                umJudoca.setClasses("Mirim Aspirante");
                 break;
-            case CATEGORIA_INFANTIL_ASPIRANTE_INDICE:
-                umJudoca.setClasses(CATEGORIA_INFANTIL_ASPIRANTE_VALOR);
+            case 1:
+                umJudoca.setClasses("Infantil Aspirante");
                 break;
-            case CATEGORIA_INFANTOJUVENIL_ASPIRANTE_INDICE:
-                umJudoca.setClasses(CATEGORIA_INFANTOJUVENIL_ASPIRANTE_VALOR);
+            case 2:
+                umJudoca.setClasses("Infanto Juvenil Aspirante");
                 break;
-            case CATEGORIA_PREJUVENIL_ASPIRANTE_INDICE:
-                umJudoca.setClasses(CATEGORIA_PREJUVENIL_ASPIRANTE_VALOR);
+            case 3:
+                umJudoca.setClasses("Pre Juvenil Aspirante");
                 break;
-            case CATEGORIA_JUVENIL_ASPIRANTE_INDICE:
-                umJudoca.setClasses(CATEGORIA_JUVENIL_ASPIRANTE_VALOR);
+            case 4:
+                umJudoca.setClasses("Juvenil Aspirante");
                 break;
-            case CATEGORIA_ADULTO_ASPIRANTE_INDICE:
-                umJudoca.setClasses(CATEGORIA_ADULTO_ASPIRANTE_VALOR);
+            case 5:
+                umJudoca.setClasses("Adulto Aspirante");
                 break;
-            case CATEGORIA_PREJUVENIL_ESPECIAL_INDICE:
-                umJudoca.setClasses(CATEGORIA_PREJUVENIL_ESPECIAL_VALOR);
+            case 6:
+                umJudoca.setClasses("Pre Juvenil Especial");
                 break;
-            case CATEGORIA_JUVENIL_ESPECIAL_INDICE:
-                umJudoca.setClasses(CATEGORIA_JUVENIL_ESPECIAL_VALOR);
+            case 7:
+                umJudoca.setClasses("Juvenil Especial");
                 break;
-            case CATEGORIA_JUNIOR_ESPECIAL_INDICE:
-                umJudoca.setClasses(CATEGORIA_JUNIOR_ESPECIAL_VALOR);
+            case 8:
+                umJudoca.setClasses("Junior Especial");
                 break;
-            case CATEGORIA_SENIOR_ESPECIAL_INDICE:
-                umJudoca.setClasses(CATEGORIA_JUNIOR_ESPECIAL_VALOR);
+            case 9:
+                umJudoca.setClasses("Senior Especial");
                 break;
         }
 
         switch (jComboBoxEstiloPredominante.getSelectedIndex()) {
-            case ESTILO_ORTODOXO_INDICE:
-                umJudoca.setEstiloPredominante(ESTILO_ORTODOXO_VALOR);
+            case 0:
+                umJudoca.setEstiloPredominante('O');
                 break;
-            case ESTILO_SOUTHPAW_INDICE:
-                umJudoca.setEstiloPredominante(ESTILO_SOUTHPAW_VALOR);
+            case 1:
+                umJudoca.setEstiloPredominante('S');
                 break;
         }
 
@@ -475,32 +446,35 @@ public class CadastroJudoca extends javax.swing.JFrame {
     private void atualizarCategoriaPeso() {
         String classes;
         switch (jComboBoxClasses.getSelectedIndex()) {
-            case CATEGORIA_MIRIM_ASPIRANTE_INDICE:
-                classes = CATEGORIA_MIRIM_ASPIRANTE_VALOR;
+            case 0:
+                classes = "Mirim Aspirante";
                 break;
-            case CATEGORIA_INFANTIL_ASPIRANTE_INDICE:
-                classes = CATEGORIA_INFANTIL_ASPIRANTE_VALOR;
+            case 1:
+                classes = "Infantil Aspirante";
                 break;
-            case CATEGORIA_PREJUVENIL_ASPIRANTE_INDICE:
-                classes = CATEGORIA_PREJUVENIL_ASPIRANTE_VALOR;
+            case 2:
+                classes = "Infanto Juvenil Aspirante";
                 break;
-            case CATEGORIA_JUVENIL_ASPIRANTE_INDICE:
-                classes = CATEGORIA_JUVENIL_ASPIRANTE_VALOR;
+            case 3:
+                classes = "Pre Juvenil Aspirante";
                 break;
-            case CATEGORIA_ADULTO_ASPIRANTE_INDICE:
-                classes = CATEGORIA_ADULTO_ASPIRANTE_VALOR;
+            case 4:
+                classes = "Juvenil Aspirante";
                 break;
-            case CATEGORIA_PREJUVENIL_ESPECIAL_INDICE:
-                classes = CATEGORIA_PREJUVENIL_ESPECIAL_VALOR;
+            case 5:
+                classes = "Adulto Aspirante";
                 break;
-            case CATEGORIA_JUVENIL_ESPECIAL_INDICE:
-                classes = CATEGORIA_JUVENIL_ESPECIAL_VALOR;
+            case 6:
+                classes = "Pre Juvenil Especial";
                 break;
-            case CATEGORIA_JUNIOR_ESPECIAL_INDICE:
-                classes = CATEGORIA_JUNIOR_ESPECIAL_VALOR;
+            case 7:
+                classes = "Juvenil Especial";
                 break;
-            case CATEGORIA_SENIOR_ESPECIAL_INDICE:
-                classes = CATEGORIA_SENIOR_ESPECIAL_VALOR;
+            case 8:
+                classes = "Junior Especial";
+                break;
+            case 9:
+                classes = "Senior Especial";
                 break;
             default:
                 return;
