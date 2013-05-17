@@ -421,7 +421,7 @@ public class CadastroJudoca extends javax.swing.JFrame {
         }
 
         if (novoRegistro == true) {
-            controleJudoca.adicionar(umJudoca);
+            controleJudoca.adicionarJudoca(umJudoca);
         }
         modoAlteracao = false;
         novoRegistro = false;
@@ -1139,7 +1139,7 @@ public class CadastroJudoca extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonAlterarActionPerformed
 
     private void jButtonExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonExcluirActionPerformed
-        this.controleJudoca.remover(umJudoca);
+        this.controleJudoca.removerJudoca(umJudoca);
         umJudoca = null;
         this.limparCampos();
         this.carregarListaJudocas();
@@ -1169,7 +1169,7 @@ private void jButtonPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//
 }//GEN-LAST:event_jButtonPesquisarActionPerformed
 
     private void pesquisarBoxeador(String nome) {
-        Judoca boxeadorPesquisado = controleJudoca.pesquisar(nome);
+        Judoca boxeadorPesquisado = controleJudoca.pesquisarJudoca(nome);
 
         if (boxeadorPesquisado == null) {
             exibirInformacao("Judoca não encontrado.");

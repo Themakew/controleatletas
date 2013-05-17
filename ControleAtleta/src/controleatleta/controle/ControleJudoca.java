@@ -15,15 +15,15 @@ public class ControleJudoca {
         return listaJudocas;
     }
     
-    public void adicionar(Judoca umJudoca) {
+    public void adicionarJudoca(Judoca umJudoca) {
         listaJudocas.add(umJudoca);
     }
     
-    public void remover(Judoca umJudoca) {
+    public void removerJudoca(Judoca umJudoca) {
         listaJudocas.remove(umJudoca);
     }
     
-    public Judoca pesquisar(String nome) {
+    public Judoca pesquisarJudoca(String nome) {
         for (Judoca b: listaJudocas) {
             if (b.getNome().equalsIgnoreCase(nome)) return b;
         }
